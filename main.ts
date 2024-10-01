@@ -1,8 +1,24 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
- * This program ...
+ * Created by: Bain Liao
+ * Created on: Sep 2024
+ * This program is a cookie clicker game
 */
 
-basic.showString('Hello, World!')
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+let cookieNumber = 0
+
+// Click cookie
+input.onButtonPressed(Button.A, function () {
+    basic.clearScreen()
+    cookieNumber = cookieNumber + 1
+    basic.showNumber(cookieNumber)
+})
+
+// Clear cookies
+input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
+    cookieNumber = 0
+    basic.showNumber(cookieNumber)
+})
